@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tilt Warp', cursive;
+    font-weight: normal;
+}
+
+body {
+    display: flex;
+    flex-flow: row;
+    padding: 8rem 17rem;
+    background-color: #212529;
+}
+
+.board {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #6c757d;
+    column-gap: .35rem;
+    row-gap: .35rem;
+    margin: auto;
+    position: relative;
+}
+
+.winner-line {
+    display: none;
+    border: none;
+    border-radius: 1rem;
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    height: .35rem;
+    rotate: 0;
+    bottom: 50%;
+    justify-self: center;
+}
+
+.space {
+    padding: .5rem;
+    background-color: #212529;
+    text-align: center;
+    width: 5rem;
+    height: 5rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 4rem;
+}
+
+.space:hover {
+    cursor: pointer;
+    background-color: #343a40;
+}
+
+.information {
+    color: white;
+    margin: auto;
+    background: #343a40;
+    border-radius: 2rem;
+    padding: 4rem 4rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.winner-status {
+    color: greenyellow;
+}
+
+#help {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+#help:hover {
+    cursor: pointer;
+}
+
+.new-game {
+    margin: 1rem auto 0;
+    background: #777;
+    padding: .75rem;
+    border-radius: 2rem;
+    font-size: 1.25rem;
+}
+
+.new-game-button:hover {
+    cursor: pointer;
+}
+
+.error {
+    display: none;
+    color: white;
+    background-color: red;
+    padding: .25rem;
+    border-radius: 0.65rem;
+    font-size: 1.125rem;
+    margin: .75rem auto 0;
+    justify-content: center;
+}
