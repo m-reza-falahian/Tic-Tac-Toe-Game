@@ -100,3 +100,61 @@ body {
     margin: .75rem auto 0;
     justify-content: center;
 }
+
+@media (max-width : 1200px) {
+    body {
+        display: flex;
+        flex-flow: row;
+        padding: 7rem 10rem;
+    }
+}
+
+@media (max-width : 986px) {
+    body {
+        display: flex;
+        flex-flow: row;
+        padding: 5rem 5rem;
+    }
+}
+
+@media (max-width : 796px) {
+    body {
+        display: flex;
+        flex-flow: column;
+        padding: 6rem 3rem;
+    }
+
+    .information {
+        margin: 2rem auto;
+    }
+}
+
+@media (max-width : 417px) {
+    body {
+        display: flex;
+        flex-flow: column;
+        padding: 7rem 2rem;
+    }
+
+    .information {
+        margin: 3rem auto;
+        padding: 3rem 3rem 1rem;
+    }
+
+    #help {
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+@media (max-width : 386px) {
+    .information {
+        font-size: small;
+        padding: 2rem 2rem 1rem;
+    }
+
+    .space {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}

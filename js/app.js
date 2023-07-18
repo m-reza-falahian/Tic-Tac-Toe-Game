@@ -39,8 +39,10 @@ function wCheck() {
             })
             if (q == 3) {
                 if (i == 1) gameStatus("x"); else gameStatus("o");
-
                 winner = a;
+                spaces.forEach((item) => {
+                    document.getElementById('' + item.id).style.pointerEvents = "none";
+                });
                 pWinningLine();
             }
         }
@@ -107,10 +109,11 @@ function pWinningLine() {
 }
 
 //add a sign
-function add(i, j) {
+function add(i, j, id) {
     if (board[i][j] == undefined) {
         board[i][j] = turn;
         if (turn == 1) x.push(i + "" + j); else o.push(i + "" + j);
+        document.getElementById(id).style.pointerEvents = "none";
         print();
     } else {
         document.querySelector(".error").innerHTML = "Space has selected";
@@ -129,6 +132,9 @@ function start() {
     winningLine.style.rotate = "0deg";
     winningLine.style.bottom = "50%";
     winningLine.style.left = "";
+    spaces.forEach((item) => {
+        document.getElementById(item.id).style.pointerEvents = "auto";
+    });
     turn = Math.floor(Math.random() * 2);
     gameStatus(null);
     print();
@@ -139,8 +145,7 @@ spaces.forEach((item) => {
         let space = item.id.split("");
         document.querySelector(".error").innerHTML = "";
         document.querySelector(".error").style.display = "none";
-        add(space[0], space[1]);
-        document.querySelector("#" + item.id).style.pointerevents = "none";
+        add(space[0], space[1], item.id);
     });
 });
 
